@@ -165,8 +165,8 @@ img { display: block; max-width: 100%; }
   padding: 20px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
-.nav__logo-name,
-.nav__logo-sub {
+.header.nav__logo-name,
+.header.nav__logo-sub {
   color: white;
 }
 .header.scrolled {
