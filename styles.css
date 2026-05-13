@@ -165,9 +165,12 @@ img { display: block; max-width: 100%; }
   padding: 20px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
-.header.nav__logo-name,
-.header.nav__logo-sub {
-  color: white;
+.nav__logo-name {
+  color: #ffffff !important;
+}
+
+.nav__logo-sub {
+  color: #c8a45d !important;
 }
 .header.scrolled {
   background: var(--navy-dk);
