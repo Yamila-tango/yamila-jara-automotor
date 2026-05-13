@@ -236,14 +236,25 @@ img { display: block; max-width: 100%; }
    HERO
 ══════════════════════════════════════════════════ */
 .hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: var(--navy-dk);
+  background: linear-gradient(
+    rgba(15, 45, 63, 0.88),
+    rgba(15, 45, 63, 0.88)
+  );
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
 }
-
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.95;
+}
 /* Fondo degradado + patrón sutil */
 .hero__bg {
   position: absolute;
