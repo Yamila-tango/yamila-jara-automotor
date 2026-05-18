@@ -184,10 +184,10 @@ img { display: block; max-width: 100%; }
   gap: 10px;
 }
 .nav__logo-img {
-  height: 44px;
+  height: 54px;
   width: auto;
-  filter: brightness(0) invert(1);
-  opacity: .92;
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 .nav__logo-text {
   display: flex;
