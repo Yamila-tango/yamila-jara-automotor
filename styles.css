@@ -16,8 +16,8 @@
   --lila:        #b79ab7;
   --lila-lt:     rgba(183,154,183,.12);
   --white:       #ffffff;
-  --gray-bg:     #f5f3f5;
-  --gray-bdr:    #e8e4e8;
+  --gray-bg:     #ede5ed;
+  --gray-bdr:    #ddd3dd;
   --txt-dk:      #1a1a1a;
   --txt-md:      #5a5a5a;
   --txt-lt:      #8a8a8a;
@@ -55,7 +55,7 @@ img { display: block; max-width: 100%; }
   padding: 0 24px;
 }
 .section          { padding: 88px 0; }
-.section--gray    { background: var(--gray-bg); }
+.section--gray    { background: linear-gradient(160deg, #ede5ed 0%, #e8dfe8 100%); }
 
 /* ── Typography helpers ── */
 .gold      { color: var(--gold); }
@@ -178,8 +178,20 @@ img { display: block; max-width: 100%; }
 }
 .nav__logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   line-height: 1.25;
+  gap: 10px;
+}
+.nav__logo-img {
+  height: 44px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: .92;
+}
+.nav__logo-text {
+  display: flex;
+  flex-direction: column;
   gap: 1px;
 }
 .nav__logo-name {
@@ -211,6 +223,20 @@ img { display: block; max-width: 100%; }
 .nav__link:hover,
 .nav__link.active { color: var(--white); background: rgba(255,255,255,.1); }
 .nav__cta { font-size: 13px !important; padding: 9px 17px !important; }
+.nav__ig {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: rgba(255,255,255,.75);
+  transition: var(--ease);
+}
+.nav__ig:hover { color: var(--lila); background: rgba(183,154,183,.12); }
+.footer__ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
 
 /* Hamburger */
 .hamburger {
