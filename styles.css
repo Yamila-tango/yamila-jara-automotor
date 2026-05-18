@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
 /* ══════════════════════════════════════════════════
    YAMILA JARA — Mandataria del Automotor
    styles.css
@@ -5,25 +7,27 @@
 
 /* ── Variables ── */
 :root {
-  --navy:        #1B2B4B;
-  --navy-dk:     #0F1C32;
-  --navy-lt:     #243659;
-  --gold:        #C9A84C;
-  --gold-lt:     #E8D5A3;
-  --gold-dk:     #A88035;
-  --white:       #FFFFFF;
-  --gray-bg:     #F4F6F9;
-  --gray-bdr:    #E2E8F0;
-  --txt-dk:      #1A202C;
-  --txt-md:      #4A5568;
-  --txt-lt:      #718096;
+  --navy:        #111111;
+  --navy-dk:     #0a0a0a;
+  --navy-lt:     #1c1c1c;
+  --gold:        #c8a45d;
+  --gold-lt:     #e8d5a3;
+  --gold-dk:     #a8843d;
+  --lila:        #b79ab7;
+  --lila-lt:     rgba(183,154,183,.12);
+  --white:       #ffffff;
+  --gray-bg:     #f5f3f5;
+  --gray-bdr:    #e8e4e8;
+  --txt-dk:      #1a1a1a;
+  --txt-md:      #5a5a5a;
+  --txt-lt:      #8a8a8a;
   --wa-green:    #25D366;
   --wa-dk:       #128C7E;
-  --sh-sm:       0 1px 4px rgba(0,0,0,.08);
-  --sh-md:       0 4px 20px rgba(0,0,0,.10);
-  --sh-lg:       0 10px 40px rgba(0,0,0,.14);
-  --r:           12px;
-  --r-lg:        20px;
+  --sh-sm:       0 2px 8px rgba(0,0,0,.06);
+  --sh-md:       0 6px 24px rgba(0,0,0,.09);
+  --sh-lg:       0 16px 48px rgba(0,0,0,.13);
+  --r:           14px;
+  --r-lg:        22px;
   --ease:        all .3s ease;
   --max:         1140px;
 }
@@ -80,17 +84,29 @@ img { display: block; max-width: 100%; }
 }
 .section-desc { font-size: 17px; color: var(--txt-md); max-width: 580px; margin: 0 auto; }
 
+/* ── Playfair Display: títulos premium ── */
+.section-title,
+.hero__title,
+.contact__title,
+.pain__title,
+.trust__quote,
+.nav__logo-name,
+.footer__name {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
 /* ── Buttons ── */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  padding: 13px 26px;
-  border-radius: 9px;
+  padding: 13px 28px;
+  border-radius: 100px;
   font-size: 15px;
   font-weight: 600;
   line-height: 1;
-  border: 2px solid transparent;
+  letter-spacing: .3px;
+  border: 1.5px solid transparent;
   transition: var(--ease);
   white-space: nowrap;
 }
@@ -122,13 +138,13 @@ img { display: block; max-width: 100%; }
 .btn--outline-navy {
   background: transparent;
   color: var(--navy);
-  border-color: var(--navy);
+  border-color: rgba(17,17,17,.35);
 }
 .btn--outline-navy:hover {
   background: var(--navy);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: var(--sh-md);
+  box-shadow: 0 6px 24px rgba(200,164,93,.18);
 }
 
 /* ── Scroll animations ── */
@@ -233,9 +249,9 @@ img { display: block; max-width: 100%; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 80% 30%, rgba(37,99,235,.12) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 10% 80%, rgba(201,168,76,.10) 0%, transparent 70%),
-    linear-gradient(135deg, #0F1C32 0%, #1B2B4B 55%, #1e3a5f 100%);
+    radial-gradient(ellipse 70% 60% at 80% 30%, rgba(183,154,183,.10) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 10% 80%, rgba(200,164,93,.08) 0%, transparent 70%),
+    linear-gradient(135deg, #0a0a0a 0%, #111111 55%, #1a1a1a 100%);
   pointer-events: none;
 }
 /* Líneas de grilla decorativas */
@@ -263,14 +279,14 @@ img { display: block; max-width: 100%; }
 
 .badge {
   display: inline-block;
-  background: rgba(201,168,76,.15);
+  background: linear-gradient(90deg, rgba(200,164,93,.12), rgba(183,154,183,.10));
   color: var(--gold);
-  border: 1px solid rgba(201,168,76,.35);
-  font-size: 11px;
+  border: 1px solid rgba(200,164,93,.28);
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  padding: 6px 16px;
+  padding: 7px 18px;
   border-radius: 100px;
   margin-bottom: 22px;
 }
@@ -403,13 +419,13 @@ img { display: block; max-width: 100%; }
   transition: var(--ease);
 }
 .trust__item:hover {
-  border-color: var(--gold);
-  box-shadow: var(--sh-md);
+  border-color: var(--lila);
+  box-shadow: 0 8px 32px rgba(183,154,183,.20);
   transform: translateY(-5px);
 }
 .trust__icon {
   width: 64px; height: 64px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-lt) 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #261c26 100%);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -443,7 +459,7 @@ img { display: block; max-width: 100%; }
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--navy), var(--gold));
+  background: linear-gradient(90deg, var(--gold), var(--lila));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .3s ease;
@@ -488,21 +504,21 @@ img { display: block; max-width: 100%; }
 .process__num {
   width: 80px; height: 80px;
   margin: 0 auto 20px;
-  background: linear-gradient(135deg, var(--navy), var(--navy-lt));
-  border: 3px solid var(--gold);
+  background: linear-gradient(135deg, #1a1a1a 0%, #261c26 100%);
+  border: 2px solid var(--gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--gold);
-  box-shadow: 0 0 0 6px rgba(201,168,76,.12);
+  box-shadow: 0 0 0 6px rgba(200,164,93,.08);
   transition: var(--ease);
 }
 .process__step:hover .process__num {
   transform: scale(1.1);
-  box-shadow: 0 0 0 12px rgba(201,168,76,.18);
+  box-shadow: 0 0 0 12px rgba(183,154,183,.16);
 }
 .process__step h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
 .process__step p  { font-size: 14px; color: var(--txt-md); line-height: 1.6; max-width: 200px; margin: 0 auto; }
@@ -512,7 +528,7 @@ img { display: block; max-width: 100%; }
    DOLOR DEL CLIENTE
 ══════════════════════════════════════════════════ */
 .pain {
-  background: linear-gradient(135deg, var(--navy-dk) 0%, var(--navy) 60%, #1e3a5f 100%);
+  background: linear-gradient(135deg, #0a0a0a 0%, #111111 55%, #1c1c1c 100%);
 }
 .pain__inner {
   text-align: center;
